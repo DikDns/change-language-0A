@@ -1,7 +1,13 @@
-
 const html = document.querySelector('html');
+const languages = window.navigator.languages;
 
-html.innerHTML = pageEN;
+if (window.navigator.languages[0] === 'id'){
+    html.innerHTML = pageID;
+    html.setAttribute('lang', 'id');
+} else {
+    html.innerHTML = pageEN;
+    html.setAttribute('lang', 'en');
+}
 
 
 html.addEventListener('click', function(e){
